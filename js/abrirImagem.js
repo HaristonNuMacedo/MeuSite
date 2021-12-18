@@ -14,7 +14,7 @@ var logo = document.querySelector('.parte02');
 logo.addEventListener('click', () => iniciaModal('modal-controlador'));
 
 document.addEventListener('scroll', () => {
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 2800) {
         iniciaModal('modal-controlador')
     }
 })

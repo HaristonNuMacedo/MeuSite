@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-color: rgb(86, 45, 233);
+    background-color: #562de9;
     height: 50px;
 }
 
@@ -75,6 +75,13 @@ header li a span {
 
 
 
+
+
+
+
+
+
+
 /* Sessão abaixo do Cabeçalho */
 .sessão01 {
     position: relative;
@@ -88,7 +95,7 @@ header li a span {
     position: relative;
     border: 2px solid black;
     width: 100%;
-    height: 500px;
+    height: 650px;
 }
 
 .parte02 {
@@ -130,15 +137,16 @@ header li a span {
 }
 
 
-/* MODAL IMAGEM
+/* 
+                    MODAL CHAMANDO A IMAGEM
 
     AO CLICAR NA IMAGEM DA FOTO DO DONO DO SITE ABRIRÁ UMA MODAL 
 PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 */
 .modal-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(35, 35, 35, 0.675);
     position: fixed;
     top: 0px;
@@ -147,7 +155,6 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     display: none;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .modal-container.mostrar {
@@ -156,13 +163,14 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .modal {
     background: #080808;
-    width: 600px;
+    width: 650px;
     min-width: 300px;
-    padding: 15px;
-    border: 10px solid white;
-    box-shadow: 0 0 0 10px #080808;
+    padding: 0px;
+    border: 5px solid #6237fc;
+    box-shadow: 0 0 0 5px #080808;
     position: relative;
     color: white;
+    height: 570px;
 }
 
 .mostrar .modal {
@@ -178,7 +186,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     height: 50px;
     border-radius: 50%;
     border: 4px solid white;
-    background: #f00303;
+    background: #562de9;
     padding-bottom: 6px;
     color: white;
     font-family: "PT Mono", monospace;
@@ -188,8 +196,76 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .fechar:hover {
     background-color: white;
-    color: #f00303;
-    border: 5.5px solid #f00303;
+    color: #562de9;
+    border: 5.5px solid #562de9;
     font-weight: 600;
 }
 
+.minhaFotoModal {
+    width: 650px;
+    height: 570px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RODAPÉ DO SITE */
+footer {
+    position: relative;
+    background-color: #562de9;
+    height: 50px;
+    margin-top: 50px;
+}
+
+footer ul{
+    display: inline-flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    top: -2px;
+    margin: 0;
+}
+
+footer li{
+    list-style: none;
+    font-size: 26px;
+    margin-right: 10px;
+    font-family: 'Segoe UI';
+}
+
+footer li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    color: #d6d6d6;
+}
+
+footer li a span {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.muroMenu{
+    border-left: 2px solid white;
+    margin-right: 5px;
+    width: 5px;
+    height: 27px;
+    margin-top: 7px;
+}
