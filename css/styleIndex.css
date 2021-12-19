@@ -4,6 +4,24 @@ body {
     font-family: 'Segoe UI';
 }
 
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+	background-color: #d6d6d6;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #fffdfd;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #562de9;
+}
+
+
 header {
     background-color: #562de9;
     height: 50px;
@@ -280,27 +298,47 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     top: 0;
     left: 0;
     width: 200px;
-    margin-left: 65px;
+    margin-left: 75px;
 }
 
 .facebook .icone {
-    border: 1px solid black;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     position: absolute;
     left: -55px;
     top: -10px;
+    background-color: blue;
+}
+
+.facebook .icone img {
+    position: absolute;
+    width: 48px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+}
+
+.facebook a {
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.facebook a:hover {
+    color: #fff;
 }
 
 .facebookTexto {
-    border: 1px solid black;
+    border: 2px solid #3b5998;
     padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.facebookTexto a {
-    color: black;
-    text-decoration: none;
+.facebookTexto:hover {
+    border: 2px solid #3b5998;
+    background-color: #3b5998;
 }
 
 .instagram {
@@ -308,56 +346,99 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     top: 0;
     left: 0;
     width: 200px;
-    margin-left: 250px;
+    margin-left: 235px;
 }
 
 .instagram .icone {
-    border: 1px solid black;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     position: absolute;
     left: -55px;
     top: -10px;
+    background-color: yellow;
+}
+
+.instagram .icone img {
+    position: absolute;
+    width: 48px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+}
+
+.instagram a {
+    color: #C13584;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.instagram a:hover {
+    color: #fff;
 }
 
 .instagramTexto {
-    border: 1px solid black;
+    border: 2px solid #C13584;
     padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.instagramTexto a {
-    color: black;
-    text-decoration: none;
+.instagramTexto:hover {
+    background-color: #C13584;
 }
 
-.twitter {
+.git {
     position: relative;
     top: 0;
     left: 0;
-    width: 200px;
-    margin-left: 250px;
+    width: 235px;
+    margin-left: 235px;
 }
 
-.twitter .icone {
-    border: 1px solid black;
+.git .icone {
+    border: 2px solid black;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    left: -55px;
+    left: -60px;
     top: -10px;
 }
 
-.twitterTexto {
-    border: 1px solid black;
-    padding: 5px 10px;
+.git .icone img {
+    position: absolute;
+    width: 48px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
 }
 
-.twitterTexto a {
+.git a {
     color: black;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
 }
+
+.git a:hover {
+    color: white;
+}
+
+.gitTexto {
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.gitTexto:hover {
+    background-color: black;
+}
+
+
+
+
+
 
 
 
