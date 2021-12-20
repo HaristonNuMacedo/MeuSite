@@ -261,7 +261,6 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 
 
-
 /* 2° Sessão */
 .sessao02 {
     position: relative;
@@ -288,10 +287,41 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 }
 
 .sessao02 .redes {
-    padding-top: 50px;
+    padding-top: 110px;
     background-color: #fff;
     display: inline-flex;
 }
+
+
+
+.contatos {
+    position: absolute;
+    left: -100px;
+    padding-top: 25px;
+}
+
+.contatos label {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contatos label span {
+    font-size: 20px;
+    cursor: text;
+}
+
+.contatos label a {
+    color: black;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.contatos label a:hover {
+    color: #562de9;
+}
+
+
 
 .facebook {
     position: relative;
@@ -445,6 +475,23 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 
 
+
+
+
+
+
+
+
+
+.parte03 {
+    position: absolute;
+    bottom: 45px;
+    right: 90px;
+    height: 380px;
+    width: 1000px;
+    background-color: #888;
+    display: flex;
+}
 
 
 
