@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="stylesheet" href="css/styleSlider.css">
+
 </head>
 <body>
     <header>
@@ -35,7 +38,20 @@
             </div>
 
             <div class="parte03">
-                
+
+                <h2>Sobre mim</h2>
+
+                <article class="c-carousel c-carousel--simple">
+                <div class="c-carousel__slides js-carousel--simple">
+                    <article class="c-carousel__slide">1</article>
+                    <article class="c-carousel__slide">2</article>
+                    <article class="c-carousel__slide">3</article>
+                </div>
+
+                <button class="js-carousel--simple-prev" aria-label="Anterior">«</button>
+                <button class="js-carousel--simple-next" aria-label="Próximo">»</button>
+                <div class="js-carousel--simple-dots" role="tablist"></div>
+                </article>
             </div>
         </div> 
 
@@ -91,5 +107,8 @@
             <li><a>Hariston Nunes Macedo</a></li>
         </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="js/slide.js"></script>
 </body>
+
 </html>
