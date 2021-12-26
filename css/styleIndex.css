@@ -483,6 +483,84 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 
 
+/* SLIDER PARTE 03 */
+.parte03 {
+    position: relative;
+    top: 325px;
+    width: 1000px;
+    height: 350px;
+    background-color: #999;
+    margin-left: 90px;
+    padding: 15px;
+}
+
+.glider.draggable {
+    user-select: none;
+    cursor: grab;
+    height: 250px;
+}
+
+.js-carousel--simple-prev {
+    position: absolute;
+    top: 47%;
+    left: -18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgba(240, 236, 236, 50%);
+    border: 2px solid #562de9;
+
+    color: #562de9;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.js-carousel--simple-next {
+    position: absolute;
+    top: 47%;
+    right: -18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgba(240, 236, 236, 50%);
+    border: 2px solid #562de9;
+
+    color: #562de9;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.glider-dot {
+    display: block;
+    transition: 0.5s;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+
+    color: rgb(204, 204, 204);
+    background: rgb(204, 204, 204);
+    width: 18px;
+    height: 18px;
+    margin: 10px;
+}
+
+.glider-dot:hover {
+    background-color: #fff;
+}
+
+.glider-dot.active {
+    background: #562de9;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
