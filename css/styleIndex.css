@@ -514,6 +514,12 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     font-weight: 600;
 }
 
+.js-carousel--simple-prev:hover {
+    background-color: #562de9;
+    border: 2px solid #562de9;
+    color: #fff;
+}
+
 .js-carousel--simple-next {
     position: absolute;
     top: 47%;
@@ -526,6 +532,12 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     color: #562de9;
     font-size: 20px;
     font-weight: 600;
+}
+
+.js-carousel--simple-next:hover {
+    background-color: #562de9;
+    border: 2px solid #562de9;
+    color: #fff;
 }
 
 .glider-dot {
