@@ -1,3 +1,6 @@
+
+/* Esta função que chama a Modal para visualização da foto*/
+
 function iniciaModal(modalID) {
 
     var modal = document.getElementById(modalID);
@@ -14,13 +17,17 @@ var logo = document.querySelector('.parte02');
 logo.addEventListener('click', () => iniciaModal('modal-controlador'));
 
 document.addEventListener('scroll', () => {
-    if (window.pageYOffset > 1800) {
+    if (window.pageYOffset > 2800) {
         iniciaModal('modal-controlador')
     }
 })
 
 
-function iniciaModal(modalID) {
+
+
+/* Esta função que chama a Modal Telefone para mudança de Theme */
+
+function iniciaModal2(modalID) {
 
     var modal = document.getElementById(modalID);
     if (modal) {
@@ -33,10 +40,10 @@ function iniciaModal(modalID) {
     }
 }
 var logo = document.querySelector('.ThemeColor');
-logo.addEventListener('click', () => iniciaModal('modal-controlador2'));
+logo.addEventListener('click', () => iniciaModal2('modal-controlador2'));
 
 document.addEventListener('scroll', () => {
     if (window.pageYOffset > 2800) {
-        iniciaModal('modal-controlador2')
+        iniciaModal2('modal-controlador2')
     }
 })
