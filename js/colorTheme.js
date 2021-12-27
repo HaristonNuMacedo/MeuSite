@@ -11,5 +11,7 @@ function changecolor() {
 
     let color2 = this.getAttribute('data-color2');
     document.documentElement.style.setProperty('--color2', color2);
-    document.documentElement.style.setProperty('--color3', color2);
+
+    let color3 = this.getAttribute('data-color3');
+    document.documentElement.style.setProperty('--color3', color3);
 }
