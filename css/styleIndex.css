@@ -127,6 +127,8 @@ header li a span {
     border: 2px solid black;
     width: 100%;
     height: 750px;
+    background: transparent;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,.3);
 }
 
 .tituloS1 {
@@ -277,6 +279,13 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 
 
+
+
+
+
+
+
+
 /* 2° Sessão */
 .sessao02 {
     position: relative;
@@ -380,7 +389,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     border: 2px solid #3b5998;
     padding: 5px 10px;
     border-radius: 4px;
-    background: rgb(204, 204, 204);
+    background: rgb(231, 229, 229);
 }
 
 .facebookTexto:hover {
@@ -429,7 +438,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     border: 2px solid #C13584;
     padding: 5px 10px;
     border-radius: 4px;
-    background: rgb(204, 204, 204);
+    background: rgb(231, 229, 229);
 }
 
 .instagramTexto:hover {
@@ -477,7 +486,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     border: 2px solid black;
     padding: 5px 10px;
     border-radius: 4px;
-    background: rgb(204, 204, 204);
+    background: rgb(231, 229, 229);
 }
 
 .gitTexto:hover {
@@ -510,7 +519,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     height: 350px;
     background-color: #888;
     border: 2px solid #000;
-    margin-left: 90px;
+    margin-left: 85px;
     padding: 15px;
 }
 
