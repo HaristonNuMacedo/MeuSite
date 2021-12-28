@@ -121,7 +121,8 @@
     <div id="modal-controlador2" class="modal-container2">
         <div class="modal2">
             <button class="fechar2">x</button>
-            <input id="primeiraFrase" style="border: 1px solid black; color: black; padding: 1px;" value="" disabled>
+            <label id="divResultado" style="color: black;"></label>
+
             <button class="colors" id="btnColor" data-color="#333" data-color2="#fff" data-color3="#fff">Dark</button>
             <button class="colors" id="btnColor" data-color="#fff" data-color2="#000">Light</button> 
         </div>
@@ -144,12 +145,15 @@
         let horario_atual = (now.getHours() + ":" + adicionaZero(now.getMinutes()) )
         //alert(horario_atual)
 
+        var label = document.getElementById("divResultado");     
+        //label.innerHTML = "teste";
+        
         if (horario_atual < '12:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, bom dia! Seja bem vindo a minha página';
+            label.innerHTML = 'Olá, bom dia! Seja bem vindo a minha página';
         } else if (horario_atual >= '12:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, boa tarde! Seja bem vindo a minha página';
+            label.innerHTML = 'Olá, boa tarde! Seja bem vindo a minha página';
         } else if (horario_atual >= '18:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, boa noite! Seja bem vindo a minha página';
+            label.innerHTML = 'Olá, boa noite! Seja bem vindo a minha página';
         }
     </script>
 
