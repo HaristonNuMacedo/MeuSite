@@ -121,7 +121,20 @@
     <div id="modal-controlador2" class="modal-container2">
         <div class="modal2">
             <button class="fechar2">x</button>
-            <input id="primeiraFrase" style="border: 1px solid black; color: black; padding: 1px;" value="" disabled>
+            <?php 
+            date_default_timezone_set('America/Sao_Paulo');
+            $hora_atual = date('H:i');
+            
+            if($hora_atual < '12:00') {
+                echo '<label style="color: black;">Olá, bom dia! Seja bem vindo a minha página</label><br>';
+            } else if($hora_atual >= '12:00') {
+                echo '<label style="color: black;">Olá, boa tarde! Seja bem vindo a minha página</label><br>';
+            } else if($hora_atual >= '18:00') {
+                echo '<label style="color: black;">Olá, boa noite! Seja bem vindo a minha página</label><br>';
+            }
+            
+            ?>
+            
             <button class="colors" id="btnColor" data-color="#333" data-color2="#fff" data-color3="#fff">Dark</button>
             <button class="colors" id="btnColor" data-color="#fff" data-color2="#000">Light</button> 
         </div>
@@ -132,26 +145,6 @@
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script src="js/slide.js"></script>
     <script src="js/colorTheme.js"></script>
-
-    <script language=javascript type="text/javascript">
-        now = new Date();
-        function adicionaZero(numero){
-            if (numero <= 9) 
-                return "0" + numero;
-            else
-                return numero; 
-        }
-        let horario_atual = (now.getHours() + ":" + adicionaZero(now.getMinutes()) )
-        //alert(horario_atual)
-
-        if (horario_atual < '12:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, bom dia! Seja bem vindo a minha página';
-        } else if (horario_atual >= '12:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, boa tarde! Seja bem vindo a minha página';
-        } else if (horario_atual >= '18:00') {
-            document.getElementById('primeiraFrase').value = 'Olá, boa noite! Seja bem vindo a minha página';
-        }
-    </script>
 
 </body>
 </html>
