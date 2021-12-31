@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="Chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>&sect;Hariston Macedo (HNM)&sect;</title>
+    <link rel="sorcut icon" href="img/LetraH2.jpg" style="width: 16px; height: 16px;">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
@@ -126,14 +127,15 @@
             $hora_atual = date('H:i');
             
             if($hora_atual < '12:00') {
-                echo '<label style="color: black;">Olá, bom dia! Seja bem vindo a minha página</label><br>';
-            } else if($hora_atual >= '12:00') {
-                echo '<label style="color: black;">Olá, boa tarde! Seja bem vindo a minha página</label><br>';
+                echo '<div class="R01"><label id="divResultado">Olá, bom dia! Seja bem vindo a minha página</label></div>';
+            } else if($hora_atual < '18:00') {
+                echo '<div class="R01"><label id="divResultado">Olá, boa tarde! Seja bem vindo a minha página</label></div>';
             } else if($hora_atual >= '18:00') {
-                echo '<label style="color: black;">Olá, boa noite! Seja bem vindo a minha página</label><br>';
+                echo '<div class="R01"><label id="divResultado">Olá, boa noite! Seja bem vindo a minha página</label></div>';
             }
             
             ?>
+            <div class="R01"><label class="msg02">Você pode mudar o tema do site escolhendo entre Dark/Light</label></div>
             
             <button class="colors" id="btnColor" data-color="#333" data-color2="#fff" data-color3="#fff">Dark</button>
             <button class="colors" id="btnColor" data-color="#fff" data-color2="#000">Light</button> 

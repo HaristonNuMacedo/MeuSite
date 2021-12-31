@@ -683,6 +683,25 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     color: #fff;
 }
 
+.R01 {
+    height: auto;
+    border: 1px solid #000;  
+    padding: 2px 6px;
+    margin: 3px;
+}
+
+#divResultado {
+    color: #000; 
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.msg02 {
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+}
+
 
 
 
