@@ -137,12 +137,23 @@
             ?>
             <div class="R01"><label class="msg02">Você gostaria de mudar o tema do site? Basta escolher entre Dark/Light</label></div>
         
-            <button class="colors" id="btnColor" name="Dark" data-color="#333" data-color2="#fff" data-color3="#fff">Dark <span></span></button>
-            <button class="colors" id="btnColor2" name="Light" data-color="#fff" data-color2="#000">Light <span></span></button> 
+            <button class="colors" id="btnColor" onclick="botaoDark()" data-color="#333" data-color2="#fff" data-color3="#fff">Dark <span></span></button>
+            <button class="colors" id="btnColor2" onclick="botaoLight()" data-color="#fff" data-color2="#000">Light <span></span></button> 
+            <div class="R02"><label id="divResultado2">...</label></div>
         </div>
         <script src="js/abrirImagem.js"></script>
     </div>
-    
+    <script language=javascript type="text/javascript">
+        
+        var label2 = document.getElementById("divResultado2");
+        function botaoDark() {
+            label2.innerHTML = 'Você mudou o tema para Dark!';
+        }
+        function botaoLight() {
+            label2.innerHTML = 'Você mudou o tema para Light!';
+        }
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script src="js/slide.js"></script>
