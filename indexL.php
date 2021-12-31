@@ -135,10 +135,10 @@
             }
             
             ?>
-            <div class="R01"><label class="msg02">Você pode mudar o tema do site escolhendo entre Dark/Light</label></div>
-            
-            <button class="colors" id="btnColor" data-color="#333" data-color2="#fff" data-color3="#fff">Dark</button>
-            <button class="colors" id="btnColor" data-color="#fff" data-color2="#000">Light</button> 
+            <div class="R01"><label class="msg02">Você gostaria de mudar o tema do site? Basta escolher entre Dark/Light</label></div>
+        
+            <button class="colors" id="btnColor" name="Dark" data-color="#333" data-color2="#fff" data-color3="#fff">Dark <span></span></button>
+            <button class="colors" id="btnColor2" name="Light" data-color="#fff" data-color2="#000">Light <span></span></button> 
         </div>
         <script src="js/abrirImagem.js"></script>
     </div>

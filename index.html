@@ -123,10 +123,12 @@
         <div class="modal2">
             <button class="fechar2">x</button>
             <div class="R01"><label id="divResultado"></label></div>
-            <div class="R01"><label class="msg02">Você pode mudar o tema do site escolhendo entre Dark/Light</label></div>
+            <div class="R01"><label class="msg02">Você gostaria de mudar o tema do site? Basta escolher entre Dark/Light</label></div>
 
-            <button class="colors" id="btnColor" data-color="#333" data-color2="#fff" data-color3="#fff">Dark</button>
-            <button class="colors" id="btnColor" data-color="#fff" data-color2="#000">Light</button> 
+            <button class="colors" id="btnColor" onclick="botaoDark()" data-color="#333" data-color2="#fff" data-color3="#fff">Dark <span></span></button>
+            <button class="colors" id="btnColor2" onclick="botaoLight()" data-color="#fff" data-color2="#000">Light <span></span></button> 
+            
+            <div class="R02"><label id="divResultado2">...</label></div>
         </div>
         <script src="js/abrirImagem.js"></script>
     </div>
@@ -157,7 +159,14 @@
         } else if (horario_atual >= '18:00') {
             label.innerHTML = 'Olá, boa noite! Seja bem vindo a minha página';
         }
-
+        
+        var label2 = document.getElementById("divResultado2");
+        function botaoDark() {
+            label2.innerHTML = 'Você mudou o tema para Dark!';
+        }
+        function botaoLight() {
+            label2.innerHTML = 'Você mudou o tema para Light!';
+        }
 
     </script>
 
