@@ -30,7 +30,7 @@
         <div class="parte01">
             <div class="tituloS1">
                 <label>Desenvolvedor de Web-sites</label>
-                <span>Linguagens: PHP e JavaScript.</span>
+                <span id="DWS">Linguagens: PHP e JavaScript.</span>
                 <img src="img/Criacao-de-Websites.png" class="web">
             </div>
 
@@ -152,6 +152,17 @@
         function botaoLight() {
             label2.innerHTML = 'Você mudou o tema para Light!';
         }
+
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+        }
+
+        const titulo = document.getElementById('DWS');
+        typeWriter(titulo);
 
     </script>
 

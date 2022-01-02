@@ -30,7 +30,7 @@
         <div class="parte01">
             <div class="tituloS1">
                 <label>Desenvolvedor de Web-sites</label>
-                <span>Linguagens: PHP e JavaScript.</span>
+                <span id="DWS">Linguagens: PHP e JavaScript.</span>
                 <img src="img/Criacao-de-Websites.png" class="web">
             </div>
 
@@ -117,13 +117,13 @@
 
     
 
-    <div class="ThemeColor"></div>
+    <div class="ThemeColor" onclick="botaoAbrir()"></div>
 
     <div id="modal-controlador2" class="modal-container2">
         <div class="modal2">
             <button class="fechar2">x</button>
             <div class="R01"><label id="divResultado"></label></div>
-            <div class="R01"><label class="msg02">Você gostaria de mudar o tema do site? Basta escolher entre Dark/Light</label></div>
+            <div class="R01"><label class="msg02" id="text02">Você gostaria de mudar o tema do site? Basta escolher entre Dark/Light</label></div>
 
             <button class="colors" id="btnColor" onclick="botaoDark()" data-color="#333" data-color2="#fff" data-color3="#fff">Dark <span></span></button>
             <button class="colors" id="btnColor2" onclick="botaoLight()" data-color="#fff" data-color2="#000">Light <span></span></button> 
@@ -160,13 +160,26 @@
             label.innerHTML = 'Olá, boa noite! Seja bem vindo a minha página';
         }
         
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+        }
+
+        const titulo = document.getElementById('DWS');
+        typeWriter(titulo);
+
         var label2 = document.getElementById("divResultado2");
         function botaoDark() {
             label2.innerHTML = 'Você mudou o tema para Dark!';
+            typeWriter(label2);
         }
         function botaoLight() {
             label2.innerHTML = 'Você mudou o tema para Light!';
-        }
+            typeWriter(label2);
+        } 
 
     </script>
 
