@@ -80,8 +80,11 @@
             <div>
                 <label>Email: <span>haristonmacedo2001@gmail.com</span></label>
                 <label><a href="pdf/Currículo_Hariston Macedo.pdf" target="_blank">Currículo</a> do proprietário</label>
+                <label>Formulário para Gerar PDF &rArr; </label> 
             </div>
         </div>
+
+        <div class="formPDF">formulario</div>
 
         <div class="redes">
             <div class="facebook">
@@ -183,5 +186,28 @@
 
     </script>
 
+    <!-- Function PDF in JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
+    <script>
+
+        function pdf() {
+            var doc = new jsPDF()
+            doc.text('Hello world!', 10, 10)
+            doc.save('Documentação.pdf')
+
+            var doc = new jsPDF({
+                orientation: 'landscape',
+                unit: 'cm',
+                format: 'letter'
+            })
+
+            var imgData = ""; // base-64
+            var doc = new jsPDF();
+            doc.setFontSize(40);
+            doc.text(35, 25, "Artigo para o iMasters");
+            doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
+        }
+    </script>
 </body>
 </html>

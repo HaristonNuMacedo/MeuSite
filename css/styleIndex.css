@@ -312,7 +312,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 }
 
 .sessao02 .redes {
-    padding-top: 110px;
+    padding-top: 150px;
     background-color: var(--color);
     display: inline-flex;
 }
@@ -321,7 +321,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .contatos {
     position: absolute;
-    left: -100px;
+    left: -225px;
     padding-top: 25px;
 }
 
@@ -344,6 +344,20 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .contatos label a:hover {
     color: #562de9;
+}
+
+.formPDF {
+    color: #fff;
+    position: absolute;
+    background-color: #000;
+    top: 172px;
+    left: 375px;
+    padding: 2px 25px;
+    cursor: pointer;
+}
+
+.formPDF:hover {
+    background-color: #562de9;
 }
 
 
