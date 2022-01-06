@@ -47,3 +47,30 @@ document.addEventListener('scroll', () => {
         iniciaModal2('modal-controlador2')
     }
 })
+
+
+
+
+
+/* Esta função que chama a Modal Formulário para gerar um pdf */
+
+function iniciaModal3(modalID) {
+
+    var modal = document.getElementById(modalID);
+    if (modal) {
+        modal.classList.add('mostrar3');
+        modal.addEventListener('click', (e) => {
+            if (e.target.id == modalID || e.target.className == 'fechar3') {
+                modal.classList.remove('mostrar3');
+            }
+        });
+    }
+}
+var logo = document.querySelector('.formPDF');
+logo.addEventListener('click', () => iniciaModal3('modal-controlador3'));
+
+document.addEventListener('scroll', () => {
+    if (window.pageYOffset > 2800) {
+        iniciaModal3('modal-controlador3')
+    }
+})

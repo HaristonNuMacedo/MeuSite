@@ -84,7 +84,28 @@
             </div>
         </div>
 
+        <!-- Botão de puxar a modal para a tela e o formulário para poder gerar o PDF -->
         <div class="formPDF">formulario</div>
+
+        <div id="modal-controlador3" class="modal-container3">
+            <div class="modal3">
+                <button class="fechar3">x</button>
+
+                <form>
+                    <label class="nome">Nome: </label>
+                    <input id="nome" autocomplete="off" required>
+
+                    <label class="nome">Sobrenome: </label>
+                    <input id="sobrenome" autocomplete="off" required>
+
+                    <label class="nome">Idade: </label>
+                    <input type="number" id="idade" autocomplete="off" required>
+
+                    <input type="submit" id="salvarPDF" onclick="pdf()" value="Salvar">
+                </form>
+            </div>
+            <script src="js/abrirImagem.js"></script>
+        </div>
 
         <div class="redes">
             <div class="facebook">
@@ -192,9 +213,16 @@
     <script>
 
         function pdf() {
+            var nome = document.getElementById('nome').value;
+            var sobrenome = document.getElementById('sobrenome').value;
+            var idade = document.getElementById('idade').value;
+                
             var doc = new jsPDF()
-            doc.text('Hello world!', 10, 10)
-            doc.save('Documentação.pdf')
+            doc.text(nome + ' ' + sobrenome, 10, 10)
+            doc.text('-----------------------------------------------------------------------------------------------', 10, 15)
+            doc.text('Idade: '+idade, 10, 20)
+
+            doc.save(nome+' '+ sobrenome+'.pdf')
 
             var doc = new jsPDF({
                 orientation: 'landscape',
@@ -204,7 +232,7 @@
 
             var imgData = ""; // base-64
             var doc = new jsPDF();
-            doc.setFontSize(40);
+            doc.setFontSize(25);
             doc.text(35, 25, "Artigo para o iMasters");
             doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
         }
