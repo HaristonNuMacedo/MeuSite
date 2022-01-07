@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="css/styleIndex.css">
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -85,20 +86,22 @@
         </div>
 
         <!-- Botão de puxar a modal para a tela e o formulário para poder gerar o PDF -->
-        <div class="formPDF">formulario</div>
+        <div class="formPDF">Formulário</div>
 
         <div id="modal-controlador3" class="modal-container3">
             <div class="modal3">
                 <button class="fechar3">x</button>
 
                 <form>
+                    <div class="tituloPDF">Formulário para gerar PDF</div>
+                    
                     <label class="nome">Nome: </label>
                     <input id="nome" autocomplete="off" required>
 
-                    <label class="nome">Sobrenome: </label>
+                    <label class="sobrenome">Sobrenome: </label>
                     <input id="sobrenome" autocomplete="off" required>
 
-                    <label class="nome">Idade: </label>
+                    <label class="idade">Idade: </label>
                     <input type="number" id="idade" autocomplete="off" required>
 
                     <input type="submit" id="salvarPDF" onclick="pdf()" value="Salvar">
@@ -211,30 +214,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 
     <script>
+        now = new Date();
+        function adicionaZero(numero){
+            if (numero <= 9) 
+                return "0" + numero;
+            else
+                return numero; 
+        }
+        dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+        monName = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
 
+        let data = (dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear())
         function pdf() {
             var nome = document.getElementById('nome').value;
             var sobrenome = document.getElementById('sobrenome').value;
             var idade = document.getElementById('idade').value;
-                
-            var doc = new jsPDF()
-            doc.text(nome + ' ' + sobrenome, 10, 10)
-            doc.text('-----------------------------------------------------------------------------------------------', 10, 15)
-            doc.text('Idade: '+idade, 10, 20)
 
-            doc.save(nome+' '+ sobrenome+'.pdf')
+            if(idade < 18) {  
+                idadeVPDF = 'Menor de 18 anos!';
+            } else {
+                idadeVPDF = 'Maior de 18 anos!'
+            }
 
-            var doc = new jsPDF({
-                orientation: 'landscape',
-                unit: 'cm',
-                format: 'letter'
-            })
+                var doc = new jsPDF()
+                doc.text(nome + ' ' + sobrenome, 10, 10)
+                doc.text('---------------------------------------------------------------------------------------------------', 10, 15)
+                doc.text('Idade: '+idade, 10, 20)
 
-            var imgData = ""; // base-64
-            var doc = new jsPDF();
-            doc.setFontSize(25);
-            doc.text(35, 25, "Artigo para o iMasters");
-            doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
+                doc.text('Brasilia-DF', 90, 270)
+                doc.text(data, 70, 280)
+
+
+                doc.save(nome+' '+ sobrenome+'.pdf')
+
+                var doc = new jsPDF({
+                    orientation: 'landscape',
+                    unit: 'cm',
+                    format: 'letter'
+                })
+
+                var imgData = ""; // base-64
+                var doc = new jsPDF();
+                doc.setFontSize(25);
+                doc.text(35, 25, "Artigo para o iMasters");
+                doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
+            
         }
     </script>
 </body>

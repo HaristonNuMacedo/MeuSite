@@ -890,7 +890,7 @@ footer li a span {
 
 .modal3 {
     background: #fff;
-    width: 185px;
+    width: 580px;
     min-width: 185px;
     padding: 2px;
     border: 2px solid #6237fc;
@@ -930,10 +930,102 @@ footer li a span {
     color: #fff;
 }
 
-.nome {
-    position: relative;
-    left: -65px;
+.tituloPDF {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15px;
 }
+
+label.nome {
+    position: relative;
+    left: -185px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+#nome {
+    width: 200px;
+    border: 1px solid #562de9;
+    border-radius: 2px;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+#nome:focus{
+    border: 1px solid #2daee9;
+        outline: none !important;
+        box-shadow: 0 0 2px #719ECE;
+}
+
+label.sobrenome {
+    position: relative;
+    left: 240px;
+    top: -52px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+#sobrenome {
+    width: 200px;
+    border: 1px solid #562de9;
+    border-radius: 2px;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 30px;
+    position: relative;
+    left: 300px;
+    top: -52px;
+}
+
+#sobrenome:focus{
+    border: 1px solid #2daee9;
+        outline: none !important;
+        box-shadow: 0 0 2px #719ECE;
+}
+
+
+label.idade {
+    position: relative;
+    left: -185px;
+    top: -35px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+#idade {
+    width: 200px;
+    border: 1px solid #562de9;
+    border-radius: 2px;
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 30px;
+    position: relative;
+    top: -35px;
+}
+
+#idade:focus{
+    border: 1px solid #2daee9;
+        outline: none !important;
+        box-shadow: 0 0 2px #719ECE;
+}
+
 
 #salvarPDF {
     width: 75px;
@@ -944,7 +1036,7 @@ footer li a span {
 
     position: absolute;
     bottom: 5px;
-    left: 30%;
+    left: 45%;
     cursor: pointer;
     border: none;
 }
