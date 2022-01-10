@@ -104,6 +104,18 @@
                     <label class="idade">Idade: </label>
                     <input type="number" id="idade" autocomplete="off" required>
 
+                    <div class="sexo">
+                        <p>Escolha seu sexo:</p><br>
+                        <div class="sexo2">
+                            <input type="radio" name="suite" id="masc" value="masc">
+                            <label for="masc">Masc.</label>
+                            <input type="radio" name="suite" id="femin" value="femin">
+                            <label for="femin">Femin.</label>
+                            <input type="radio" name="suite" id="outros" value="outros">
+                            <label for="outros">Outros:</label>
+                        </div>
+                    </div>
+
                     <input type="submit" id="salvarPDF" onclick="pdf()" value="Salvar">
                 </form>
             </div>
@@ -225,26 +237,37 @@
         monName = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
 
         let data = (dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear())
+        let hora = (now.getHours() + ":" + adicionaZero(now.getMinutes()) )
+
         function pdf() {
             var nome = document.getElementById('nome').value;
             var sobrenome = document.getElementById('sobrenome').value;
             var idade = document.getElementById('idade').value;
 
-            if(idade < 18) {  
-                idadeVPDF = 'Menor de 18 anos!';
+            if (nome == "" || sobrenome == "" || idade == "") {
+                //Retorna nada, apenas fica esperando o usuário digitar os campos.
             } else {
-                idadeVPDF = 'Maior de 18 anos!'
-            }
+                if(idade < 18) {  
+                    idadeVPDF = 'Menor de 18 anos!';
+                } else {
+                    idadeVPDF = 'Maior de 18 anos!'
+                }
 
                 var doc = new jsPDF()
+                doc.setFontSize(22);
                 doc.text(nome + ' ' + sobrenome, 10, 10)
                 doc.text('---------------------------------------------------------------------------------------------------', 10, 15)
+
+                doc.setFontSize(12);
                 doc.text('Idade: '+idade, 10, 20)
                 doc.text(idadeVPDF, 40, 20)
 
-                doc.text('Brasilia-DF', 90, 270)
-                doc.text(data, 70, 280)
+                doc.setFontSize(12);
+                doc.text('Brasilia-DF', 95, 272)
+                doc.text(data, 75, 280)
 
+                doc.setFontSize(8);
+                doc.text(hora, 75, 280)
 
                 doc.save(nome+' '+ sobrenome+'.pdf')
 
@@ -259,7 +282,7 @@
                 doc.setFontSize(25);
                 doc.text(35, 25, "Artigo para o iMasters");
                 doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
-            
+            }
         }
     </script>
 </body>

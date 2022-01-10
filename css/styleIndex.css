@@ -890,13 +890,12 @@ footer li a span {
 
 .modal3 {
     background: #fff;
-    width: 580px;
-    min-width: 185px;
+    width: 680px;
     padding: 2px;
     border: 2px solid #6237fc;
     position: relative;
     color: white;
-    height: 275px;
+    height: 375px;
     border-radius: 4px;
 }
 
@@ -945,7 +944,7 @@ footer li a span {
 
 label.nome {
     position: relative;
-    left: -185px;
+    left: -220px;
     display: flex;
     font-size: 16px;
     font-weight: 600;
@@ -953,7 +952,7 @@ label.nome {
 }
 
 #nome {
-    width: 200px;
+    width: 225px;
     border: 1px solid #562de9;
     border-radius: 2px;
     color: black;
@@ -970,7 +969,7 @@ label.nome {
 
 label.sobrenome {
     position: relative;
-    left: 240px;
+    left: 305px;
     top: -52px;
     display: flex;
     font-size: 16px;
@@ -979,7 +978,7 @@ label.sobrenome {
 }
 
 #sobrenome {
-    width: 200px;
+    width: 225px;
     border: 1px solid #562de9;
     border-radius: 2px;
     color: black;
@@ -987,7 +986,7 @@ label.sobrenome {
     padding: 5px;
     margin-left: 30px;
     position: relative;
-    left: 300px;
+    left: 380px;
     top: -52px;
 }
 
@@ -1000,7 +999,7 @@ label.sobrenome {
 
 label.idade {
     position: relative;
-    left: -185px;
+    left: -220px;
     top: -35px;
     display: flex;
     font-size: 16px;
@@ -1009,7 +1008,7 @@ label.idade {
 }
 
 #idade {
-    width: 200px;
+    width: 125px;
     border: 1px solid #562de9;
     border-radius: 2px;
     color: black;
@@ -1035,9 +1034,38 @@ label.idade {
     color: #fff;
 
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     left: 45%;
     cursor: pointer;
     border: none;
+}
+
+.sexo {
+    position: relative;
+    top: -100px;
+    width: 150px;
+    left: 330px;
+}
+
+.sexo p {
+    position: relative;
+    font-size: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    top: 20px;
+}
+
+.sexo2 {
+    display: flex;
+}
+
+.sexo2 label {
+    position: relative;
+    left: -55px;
+    top: -2px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
 }
 
