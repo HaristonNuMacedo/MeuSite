@@ -107,7 +107,7 @@
                     <div class="sexo">
                         <p>Escolha seu sexo:</p><br>
                         <div class="sexo2">
-                            <input type="radio" name="suite" id="masc" value="masc">
+                            <input type="radio" name="suite" id="masc" value="masc" checked required>
                             <label for="masc">Masc.</label>
                             <input type="radio" name="suite" id="femin" value="femin">
                             <label for="femin">Femin.</label>
@@ -244,6 +244,10 @@
             var sobrenome = document.getElementById('sobrenome').value;
             var idade = document.getElementById('idade').value;
 
+            var masc = document.getElementById('masc');
+            var femin = document.getElementById('femin');
+            var outros = document.getElementById('outros');
+
             if (nome == "" || sobrenome == "" || idade == "") {
                 //Retorna nada, apenas fica esperando o usuário digitar os campos.
             } else {
@@ -256,18 +260,29 @@
                 var doc = new jsPDF()
                 doc.setFontSize(22);
                 doc.text(nome + ' ' + sobrenome, 10, 10)
-                doc.text('---------------------------------------------------------------------------------------------------', 10, 15)
+                doc.text('-------------------------------------------------------------------------', 10, 15)
 
                 doc.setFontSize(12);
                 doc.text('Idade: '+idade, 10, 20)
                 doc.text(idadeVPDF, 40, 20)
 
+                if (masc.checked == true) {
+                    sexo = 'masculino';
+                    doc.text('sexo: '+sexo, 10, 30)
+                } else if (femin.checked == true) {
+                    sexo = 'feminino';
+                    doc.text('sexo: '+sexo, 10, 30)
+                } else if (outros.checked == true) {
+                    sexo = 'outros';
+                    doc.text('sexo: '+sexo, 10, 30)
+                }
+                
                 doc.setFontSize(12);
                 doc.text('Brasilia-DF', 95, 272)
                 doc.text(data, 75, 280)
 
                 doc.setFontSize(8);
-                doc.text(hora, 75, 280)
+                doc.text(hora, 160, 285)
 
                 doc.save(nome+' '+ sobrenome+'.pdf')
 
