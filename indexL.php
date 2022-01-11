@@ -80,7 +80,45 @@
             <div>
                 <label>Email: <span>haristonmacedo2001@gmail.com</span></label>
                 <label><a href="pdf/Currículo_Hariston Macedo.pdf" target="_blank">Currículo</a> do proprietário</label>
+                <label>Formulário para Gerar PDF &rArr; </label> 
             </div>
+        </div>
+
+        <!-- Botão de puxar a modal para a tela e o formulário para poder gerar o PDF -->
+        <div class="formPDF">Formulário</div>
+
+        <div id="modal-controlador3" class="modal-container3">
+            <div class="modal3">
+                <button class="fechar3">x</button>
+
+                <form>
+                    <div class="tituloPDF">Formulário para gerar PDF</div>
+                    
+                    <label class="nome">Nome: </label>
+                    <input id="nome" autocomplete="off" required>
+
+                    <label class="sobrenome">Sobrenome: </label>
+                    <input id="sobrenome" autocomplete="off" required>
+
+                    <label class="idade">Idade: </label>
+                    <input type="number" id="idade" autocomplete="off" required>
+
+                    <div class="sexo">
+                        <p>Escolha seu sexo:</p><br>
+                        <div class="sexo2">
+                            <input type="radio" name="suite" id="masc" value="masc" checked required>
+                            <label for="masc">Masc.</label>
+                            <input type="radio" name="suite" id="femin" value="femin">
+                            <label for="femin">Femin.</label>
+                            <input type="radio" name="suite" id="outros" value="outros">
+                            <label for="outros">Outros:</label>
+                        </div>
+                    </div>
+
+                    <input type="submit" id="salvarPDF" onclick="pdf()" value="Salvar">
+                </form>
+            </div>
+            <script src="js/abrirImagem.js"></script>
         </div>
 
         <div class="redes">

@@ -223,6 +223,7 @@
     </script>
 
     <!-- Function PDF in JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 
     <script>
@@ -233,7 +234,7 @@
             else
                 return numero; 
         }
-        dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+        dayName = new Array ("domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado")
         monName = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
 
         let data = (dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear())
@@ -257,15 +258,23 @@
                     idadeVPDF = 'Maior de 18 anos!'
                 }
 
+                // SITE PARA VISITAR A DOCUMENTAÇÃO DO PDF
+                // https://parall.ax/products/jspdf
+
                 var doc = new jsPDF()
+
                 doc.setFontSize(22);
+                doc.setTextColor(0, 0, 0)
                 doc.text(nome + ' ' + sobrenome, 10, 10)
                 doc.text('-------------------------------------------------------------------------', 10, 15)
 
                 doc.setFontSize(12);
                 doc.text('Idade: '+idade, 10, 20)
+
+                doc.setTextColor(255, 0, 0)
                 doc.text(idadeVPDF, 40, 20)
 
+                doc.setTextColor(0, 0, 0)
                 if (masc.checked == true) {
                     sexo = 'masculino';
                     doc.text('sexo: '+sexo, 10, 30)
@@ -284,19 +293,15 @@
                 doc.setFontSize(8);
                 doc.text(hora, 160, 285)
 
-                doc.save(nome+' '+ sobrenome+'.pdf')
-
                 var doc = new jsPDF({
-                    orientation: 'landscape',
+                    orientation: 'portrait',
                     unit: 'cm',
-                    format: 'letter'
+                    format: 'a4'
                 })
 
-                var imgData = ""; // base-64
-                var doc = new jsPDF();
-                doc.setFontSize(25);
-                doc.text(35, 25, "Artigo para o iMasters");
-                doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
+                doc.output('dataurlnewwindow');
+                //doc.save(nome+' '+ sobrenome+'.pdf')
+
             }
         }
     </script>
