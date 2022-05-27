@@ -1,8 +1,8 @@
 
 :root {
-    --color: #fff;
-    --color2: #000;
-    --color3: #562de9;
+    --color: #333;
+    --color2: #fff;
+    --color3: #fff;
 }
 
 .testColor {
@@ -30,12 +30,12 @@ body {
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #562de9;
+	background-color: #888;
 }
 
 
 header {
-    background-color: #562de9;
+    background-color: #888;
     height: 50px;
 }
 
@@ -139,10 +139,40 @@ header li a span {
     color: var(--color2);
 }
 
+/*
+@keyframes animateText {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+*/
+
 .tituloS1 label {
     font-size: 34px;
     font-weight: 600;
     display: block;
+    
+    background: linear-gradient(90deg, #fff, #000, #fff, #000, #fff);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: animateText 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tituloS1 span {
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #fff, #999, #fff, #999, #fff);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: animateText 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 4px;
 }
 
 .tituloS1 img.web{
@@ -811,7 +841,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 /* RODAPÉ DO SITE */
 footer {
     position: relative;
-    background-color: #562de9;
+    background-color: #888;
     height: 50px;
     margin-top: 50px;
 }
