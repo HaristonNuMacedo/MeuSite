@@ -83,7 +83,19 @@
             <label><span>H</span>abilidades</label>
         </div>
 
+        <div class="preCont">
+            <div class="container">
+                <div class="toggleBtn"></div>
+            </div>
+        </div>
 
+        <script>
+            let toggleBtn = document.querySelector('.toggleBtn');
+            let container = document.querySelector('.container');
+            toggleBtn.onclick = function (){
+                container.classList.toggle('active')
+            }
+        </script>
     </section>
 </div>
 
