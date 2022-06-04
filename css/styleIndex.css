@@ -113,6 +113,13 @@ header li a span {
 
 
 
+
+
+
+
+
+
+
 /* Sessão abaixo do Cabeçalho */
 .divS01 {
     display: flex;
@@ -134,7 +141,7 @@ header li a span {
     position: relative;
     border: 2px solid black;
     width: 100%;
-    height: 750px;
+    height: 805px;
     background: transparent;
     box-shadow: 4px 4px 4px 0 rgba(0,0,0,.3);
 }
@@ -261,7 +268,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     width: 650px;
     min-width: 300px;
     padding: 0px;
-    border: 5px solid #6237fc;
+    border: 1px solid #006400;
     box-shadow: 0 0 0 5px #080808;
     position: relative;
     color: white;
@@ -281,7 +288,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     height: 50px;
     border-radius: 50%;
     border: 4px solid white;
-    background: #562de9;
+    background: #006400;
     padding-bottom: 6px;
     color: white;
     font-family: "PT Mono", monospace;
@@ -291,8 +298,8 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .fechar:hover {
     background-color: white;
-    color: #562de9;
-    border: 5.5px solid #562de9;
+    color: #006400;
+    border: 5.5px solid #006400;
     font-weight: 600;
 }
 
@@ -322,14 +329,63 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 
 
+.meioHabil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessaoHabil {
+    width: 1160px;
+    background-color: #333;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.sessaoHabil .tituloHabil {
+    text-align: center;
+}
+
+.sessaoHabil label {
+    color: var(--color3);
+    font-size: 26px;
+    font-family: 'Segoe UI';
+}
+
+.sessaoHabil label span {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 2° Sessão */
+.meioContao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sessao02 {
     position: relative;
-    width: 88%;
-    padding-left: 6%;
-    padding-right: 6%;
+    width: 1170px;
     padding-top: 50px;
 }
 
@@ -350,7 +406,6 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 }
 
 .sessao02 .redes {
-    padding-top: 150px;
     background-color: var(--color);
     display: inline-flex;
 }
@@ -359,8 +414,8 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
 .contatos {
     position: absolute;
-    left: -225px;
-    padding-top: 25px;
+    left: -290px;
+    padding-top: 40px;
 }
 
 .contatos label {
@@ -398,7 +453,9 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     background-color: #562de9;
 }
 
-
+.redes {
+    margin-top: 180px;
+}
 
 .facebook {
     position: relative;
@@ -568,17 +625,18 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     position: relative;
     top: 325px;
     width: 1000px;
-    height: 350px;
-    background-color: #888;
+    height: 400px;
+    background: #888;
+    backdrop-filter: blur(15px);
     border: 2px solid #000;
-    margin-left: 85px;
+    margin-left: 65px;
     padding: 15px;
 }
 
 .glider.draggable {
     user-select: none;
     cursor: grab;
-    height: 300px;
+    height: 350px;
 }
 
 .js-carousel--simple-prev {
@@ -588,16 +646,17 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     padding: 5px 10px;
     cursor: pointer;
     background-color: rgb(240, 236, 236);
-    border: 2px solid #562de9;
+    border: 2px solid #006400;
 
-    color: #562de9;
+    color: #006400;
     font-size: 20px;
     font-weight: 600;
+    border-radius: 4px;
 }
 
 .js-carousel--simple-prev:hover {
-    background-color: #562de9;
-    border: 2px solid #562de9;
+    background-color: #006400;
+    border: 2px solid #006400;
     color: #fff;
 }
 
@@ -608,16 +667,17 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
     padding: 5px 10px;
     cursor: pointer;
     background-color: rgba(240, 236, 236);
-    border: 2px solid #562de9;
+    border: 2px solid #006400;
 
-    color: #562de9;
+    color: #006400;
     font-size: 20px;
     font-weight: 600;
+    border-radius: 4px;
 }
 
 .js-carousel--simple-next:hover {
-    background-color: #562de9;
-    border: 2px solid #562de9;
+    background-color: #006400;
+    border: 2px solid #006400;
     color: #fff;
 }
 
@@ -631,8 +691,8 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 
     color: rgb(204, 204, 204);
     background: rgb(204, 204, 204);
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     margin: 10px;
 }
 
@@ -641,7 +701,7 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 }
 
 .glider-dot.active {
-    background: #562de9;
+    background: #006400;
 }
 
 
@@ -901,212 +961,4 @@ footer li a span {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Formulário para PDF */
-.modal-container3 {
-    width: 65em;
-    height: 38em;
-    background: rgba(223, 223, 223, 0.675);
-    position: fixed;
-    bottom: 25px;
-    left: 165px;
-    z-index: 2000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-}
-
-.modal-container3.mostrar3 {
-    display: flex;
-}
-
-.modal3 {
-    background: #fff;
-    width: 680px;
-    padding: 2px;
-    border: 2px solid #6237fc;
-    position: relative;
-    color: white;
-    height: 375px;
-    border-radius: 4px;
-}
-
-.mostrar3 .modal3 {
-    animation: modal .3s;
-}
-
-.fechar3 {
-    position: absolute;
-    font-size: 1.5em;
-    top: -20px;
-    right: -20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #562de9;
-    background: #fff;
-    padding-top: 0px;
-    padding-bottom: 30px;
-    padding-right: 22px;
-    padding-left: 10px;
-    color: #562de9;
-    font-family: "PT Mono", monospace;
-    cursor: pointer;
-    box-shadow: 0 4px 4px 0 rgba(0,0,0,.4);
-    font-weight: 600;
-}
-
-.fechar3:hover {
-    background-color: #562de9;
-    color: #fff;
-}
-
-.tituloPDF {
-    color: #000;
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000;
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 15px;
-}
-
-label.nome {
-    position: relative;
-    left: -220px;
-    display: flex;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-}
-
-#nome {
-    width: 225px;
-    border: 1px solid #562de9;
-    border-radius: 2px;
-    color: black;
-    font-size: 16px;
-    padding: 5px;
-    margin-left: 30px;
-}
-
-#nome:focus{
-    border: 1px solid #2daee9;
-        outline: none !important;
-        box-shadow: 0 0 2px #719ECE;
-}
-
-label.sobrenome {
-    position: relative;
-    left: 305px;
-    top: -52px;
-    display: flex;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-}
-
-#sobrenome {
-    width: 225px;
-    border: 1px solid #562de9;
-    border-radius: 2px;
-    color: black;
-    font-size: 16px;
-    padding: 5px;
-    margin-left: 30px;
-    position: relative;
-    left: 380px;
-    top: -52px;
-}
-
-#sobrenome:focus{
-    border: 1px solid #2daee9;
-        outline: none !important;
-        box-shadow: 0 0 2px #719ECE;
-}
-
-
-label.idade {
-    position: relative;
-    left: -220px;
-    top: -35px;
-    display: flex;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-}
-
-#idade {
-    width: 125px;
-    border: 1px solid #562de9;
-    border-radius: 2px;
-    color: black;
-    font-size: 16px;
-    padding: 5px;
-    margin-left: 30px;
-    position: relative;
-    top: -35px;
-}
-
-#idade:focus{
-    border: 1px solid #2daee9;
-        outline: none !important;
-        box-shadow: 0 0 2px #719ECE;
-}
-
-
-#salvarPDF {
-    width: 75px;
-    height: 25px;
-    text-align: center;
-    background-color: #562de9;
-    color: #fff;
-
-    position: absolute;
-    bottom: 10px;
-    left: 45%;
-    cursor: pointer;
-    border: none;
-}
-
-.sexo {
-    position: relative;
-    top: -125px;
-    width: 150px;
-    left: 330px;
-}
-
-.sexo p {
-    position: relative;
-    font-size: 20px;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    top: 30px;
-}
-
-.sexo2 {
-    display: flex;
-}
-
-.sexo2 label {
-    position: relative;
-    left: -55px;
-    top: -2px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-}
 
