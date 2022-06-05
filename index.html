@@ -147,6 +147,7 @@
     </section>
 </div>
 
+<button onclick="gerarPDF()">GerarPDF</button>
 
     <footer>
         <ul>
@@ -223,88 +224,129 @@
 
     </script>
 
-    <!-- Function PDF in JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+<script>
+function gerarPDF() {
+    var pdfObject = jsPDFInvoiceTemplate.default(props);
+    //console.log("Object created: ", pdfObject)
+}
 
-    <script>
-        now = new Date();
-        function adicionaZero(numero){
-            if (numero <= 9) 
-                return "0" + numero;
-            else
-                return numero; 
+var props = {
+    outputType: jsPDFInvoiceTemplate.OutputType.Save,
+    returnJsPDFDocObject: true,
+    fileName: "Invoice 2021",
+    orientationLandscape: false,
+    compress: true,
+    logo: {
+        src: "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/logo.png",
+        type: 'PNG', //optional, when src= data:uri (nodejs case)
+        width: 53.33, //aspect ratio = width/height
+        height: 26.66,
+        margin: {
+            top: 0, //negative or positive num, from the current position
+            left: 0 //negative or positive num, from the current position
         }
-        dayName = new Array ("domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado")
-        monName = new Array ("janeiro", "fevereiro", "março", "abril", "Maio", "junho", "agosto", "outubro", "novembro", "dezembro")
-
-        let data = (dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear())
-        let hora = (now.getHours() + ":" + adicionaZero(now.getMinutes()) )
-
-        function pdf() {
-            var nome = document.getElementById('nome').value;
-            var sobrenome = document.getElementById('sobrenome').value;
-            var idade = document.getElementById('idade').value;
-
-            var masc = document.getElementById('masc');
-            var femin = document.getElementById('femin');
-            var outros = document.getElementById('outros');
-
-            if (nome == "" || sobrenome == "" || idade == "") {
-                //Retorna nada, apenas fica esperando o usuário digitar os campos.
-            } else {
-                if(idade < 18) {  
-                    idadeVPDF = 'Menor de 18 anos!';
-                } else {
-                    idadeVPDF = 'Maior de 18 anos!'
-                }
-
-                // SITE PARA VISITAR A DOCUMENTAÇÃO DO PDF
-                // https://parall.ax/products/jspdf
-
-                var doc = new jsPDF()
-
-                doc.setFontSize(22);
-                doc.setTextColor(0, 0, 0)
-                doc.text(nome + ' ' + sobrenome, 10, 10)
-                doc.text('-------------------------------------------------------------------------', 10, 15)
-
-                doc.setFontSize(12);
-                doc.text('Idade: '+idade, 10, 20)
-
-                doc.setTextColor(255, 0, 0)
-                doc.text(idadeVPDF, 40, 20)
-
-                doc.setTextColor(0, 0, 0)
-                if (masc.checked == true) {
-                    sexo = 'masculino';
-                    doc.text('sexo: '+sexo, 10, 30)
-                } else if (femin.checked == true) {
-                    sexo = 'feminino';
-                    doc.text('sexo: '+sexo, 10, 30)
-                } else if (outros.checked == true) {
-                    sexo = 'outros';
-                    doc.text('sexo: '+sexo, 10, 30)
-                }
-                
-                doc.setFontSize(12);
-                doc.text('Brasilia-DF', 95, 272)
-                doc.text(data, 75, 280)
-
-                doc.setFontSize(8);
-                doc.text(hora, 160, 285)
-
-                var doc = new jsPDF({
-                    orientation: 'portrait',
-                    unit: 'cm',
-                    format: 'a4'
-                })
-
-                doc.output('dataurlnewwindow');
-                //doc.save(nome+' '+ sobrenome+'.pdf')
-
+    },
+    stamp: {
+        inAllPages: true, //by default = false, just in the last page
+        src: "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/qr_code.jpg",
+        type: 'JPG', //optional, when src= data:uri (nodejs case)
+        width: 20, //aspect ratio = width/height
+        height: 20,
+        margin: {
+            top: 0, //negative or positive num, from the current position
+            left: 0 //negative or positive num, from the current position
+        }
+    },
+    business: {
+        name: "Business Name",
+        address: "Albania, Tirane ish-Dogana, Durres 2001",
+        phone: "(+355) 069 11 11 111",
+        email: "email@example.com",
+        email_1: "info@example.al",
+        website: "www.example.al",
+    },
+    contact: {
+        label: "Invoice issued for:",
+        name: "Client Name",
+        address: "Albania, Tirane, Astir",
+        phone: "(+355) 069 22 22 222",
+        email: "client@website.al",
+        otherInfo: "www.website.al",
+    },
+    invoice: {
+        label: "Invoice #: ",
+        num: 19,
+        invDate: "Payment Date: 01/01/2021 18:12",
+        invGenDate: "Invoice Date: 02/02/2021 10:17",
+        headerBorder: false,
+        tableBodyBorder: false,
+        header: [
+          {
+            title: "#", 
+            style: { 
+              width: 10 
+            } 
+          }, 
+          { 
+            title: "Title",
+            style: {
+              width: 30
+            } 
+          }, 
+          { 
+            title: "Description",
+            style: {
+              width: 80
+            } 
+          }, 
+          { title: "Price"},
+          { title: "Quantity"},
+          { title: "Unit"},
+          { title: "Total"}
+        ],
+        table: Array.from(Array(10), (item, index)=>([
+            index + 1,
+            "There are many variations ",
+            "Lorem Ipsum is simply dummy text dummy text ",
+            200.5,
+            4.5,
+            "m2",
+            400.5
+        ])),
+        additionalRows: [{
+            col1: 'Total:',
+            col2: '145,250.50',
+            col3: 'ALL',
+            style: {
+                fontSize: 14 //optional, default 12
             }
-        }
-    </script>
+        },
+        {
+            col1: 'VAT:',
+            col2: '20',
+            col3: '%',
+            style: {
+                fontSize: 10 //optional, default 12
+            }
+        },
+        {
+            col1: 'SubTotal:',
+            col2: '116,199.90',
+            col3: 'ALL',
+            style: {
+                fontSize: 10 //optional, default 12
+            }
+        }],
+        invDescLabel: "Invoice Note",
+        invDesc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+    },
+    footer: {
+        text: "The invoice is created on a computer and is valid without the signature and stamp.",
+    },
+    pageEnable: true,
+    pageLabel: "Page ",
+};
+</script>
 </body>
 </html>
