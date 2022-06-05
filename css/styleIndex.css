@@ -358,10 +358,17 @@ PARA VISUALZAÇÃO DESTA MESMA IMAGEM SÓ QUE MAIOR.
 }
 
 .preCont {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.preCont .col:nth-child(1), .preCont .col:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
 }
 
 .container {
