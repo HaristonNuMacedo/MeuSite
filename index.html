@@ -86,20 +86,36 @@
         <div class="preCont">
             <div class="col">
                 <div class="container">
-                    <div class="toggleBtn"></div>
+                    <div class="toggleBtn">Saiba Mais</div>
                 </div>
             </div>
 
             <div class="col">
-                Teste
+                <div class="cardH">
+                    <div class="textoBoxH">
+                        <div class="contentH">
+                            <h2>Principais Habilidades<br><span>Tecnologias</span></h2>
+                            <div class="painelScript"></div>
+                        </div>
+                    </div>
+                    <div class="toggleH">
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <script>
-            let toggleBtn = document.querySelector('.toggleBtn');
+            /*let toggleBtn = document.querySelector('.toggleBtn');
             let container = document.querySelector('.container');
             toggleBtn.onclick = function (){
                 container.classList.toggle('active')
+            }*/
+
+            let card = document.querySelector('.cardH');
+            let toggleH = document.querySelector('.toggleH');
+            toggleH.onclick = function (){
+                card.classList.toggle('active')
             }
         </script>
     </section>
